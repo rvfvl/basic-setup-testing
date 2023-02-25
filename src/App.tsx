@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import _ from "lodash";
+import axios from "axios";
+import "./style.css";
 
-const App = (props: { test: string }) => {
+const App = () => {
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((res) => {
+      console.log(res);
+    });
+  }, []);
+
   const handleClick = () => {
-    console.log("clicked!!!!!!!!!!!!!!!!!!!!");
+    console.log("clicked!!!!!!!!!!!!2321!!!!!!!!");
     debugger;
   };
 
