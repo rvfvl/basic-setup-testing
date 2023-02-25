@@ -7,5 +7,17 @@
   </head>
   <body>
     <div id="app"></div>
+    <div id="calculator-widget"></div>
+    <script>
+      addEventListener("DOMContentLoaded", () => {
+        window.Widget({
+          id: "calculator-widget",
+          title: "Calculator",
+          width: 400,
+          height: 400,
+          url: "http://localhost:3000",
+        });
+      });
+    </script>
   </body>
 </html>

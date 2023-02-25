@@ -15,9 +15,12 @@ module.exports = (args) => {
         template: "./public/index.html",
       }),
     ],
-    entry: "./src/index.tsx",
+    entry: {
+      app: "./src/index.tsx",
+      widget: "./src/widget.tsx",
+    },
     output: {
-      filename: "bundle.js",
+      filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
       clean: true,
     },
@@ -40,6 +43,9 @@ module.exports = (args) => {
     },
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
+    },
+    optimization: {
+      runtimeChunk: "single",
     },
   };
 };
