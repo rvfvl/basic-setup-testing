@@ -4,10 +4,10 @@ type Props = { label: string } & React.InputHTMLAttributes<HTMLInputElement>;
 
 const Input = (props: Props) => {
   return (
-    <>
-      <label>{props.label}</label>
+    <div>
+      <label className="block pb-1 font-mono">{props.label}:</label>
       <input className="border" {...props} />
-    </>
+    </div>
   );
 };
 
