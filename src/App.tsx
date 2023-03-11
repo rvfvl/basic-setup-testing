@@ -1,12 +1,8 @@
 import React from "react";
-import "./style.css";
+import "./style.scss";
 
 const App = () => {
-  return (
-    <div>
-      <h1>My Site</h1>
-    </div>
-  );
+  return <div className="bg-green-600">eeeee</div>;
 };
 
 export default App;
