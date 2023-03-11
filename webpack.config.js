@@ -8,6 +8,8 @@ module.exports = (args) => {
     devtool: "inline-source-map",
     devServer: {
       static: "./dist",
+      port: 3000,
+      historyApiFallback: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
